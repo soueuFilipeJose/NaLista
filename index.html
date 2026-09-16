@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NaLista — descubra shows, festas, teatro e experiências perto de você." />
+  <meta name="theme-color" content="#6C2BFF" />
+  <title>NaLista — Onde tem?</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="NaLista — página inicial">
+        <img src="assets/logo.png" alt="" class="brand-mark" />
+        <span class="brand-name">NaLista</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+        <a href="#eventos">Eventos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#vantagens">Vantagens</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-ghost" type="button">Entrar</button>
+        <button class="btn btn-primary" type="button">Criar conta</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-orb hero-orb-a"></div>
+      <div class="hero-orb hero-orb-b"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Seu próximo rolê começa aqui</span>
+          <h1 id="hero-title">Onde tem? <span>NaLista.</span></h1>
+          <p>Descubra shows, festas, teatro e experiências em um só lugar. Compra rápida, ingresso digital e zero complicação.</p>
+
+          <form class="hero-search" id="hero-search" role="search">
+            <label class="search-field">
+              <span class="sr-only">Buscar evento</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+              <input id="hero-query" type="search" placeholder="Busque por evento, artista ou local" autocomplete="off" />
+            </label>
+            <button class="btn btn-primary search-button" type="submit">Buscar eventos</button>
+          </form>
+
+          <div class="hero-meta" aria-label="Benefícios rápidos">
+            <span>✓ Compra segura</span>
+            <span>✓ Ingresso no celular</span>
+            <span>✓ Suporte de verdade</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="ticket-stack ticket-back"></div>
+          <div class="ticket-card">
+            <div class="ticket-top">
+              <span class="ticket-kicker">NA LISTA DE HOJE</span>
+              <span class="ticket-chip">LIVE</span>
+            </div>
+            <div class="ticket-art">
+              <span class="wave wave-1"></span>
+              <span class="wave wave-2"></span>
+              <span class="wave wave-3"></span>
+              <span class="wave wave-4"></span>
+              <span class="wave wave-5"></span>
+            </div>
+            <div class="ticket-info">
+              <div>
+                <strong>NOITE VIOLETA</strong>
+                <small>São Paulo · 22:00</small>
+              </div>
+              <div class="ticket-date"><b>18</b><small>OUT</small></div>
+            </div>
+            <div class="ticket-cut"></div>
+            <div class="ticket-code">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="floating-pill pill-a">+ 240 eventos</div>
+          <div class="floating-pill pill-b">Ingresso confirmado ✓</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section events-section" id="eventos" aria-labelledby="events-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Em destaque</span>
+            <h2 id="events-title">Eventos para colocar na lista</h2>
+          </div>
+          <p>Uma seleção de experiências que estão movimentando a cidade.</p>
+        </div>
+
+        <div class="filters" aria-label="Filtros de eventos">
+          <label class="filter-search">
+            <span class="sr-only">Filtrar eventos</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+            <input id="event-search" type="search" placeholder="Buscar evento" />
+          </label>
+          <div class="category-tabs" role="group" aria-label="Categorias">
+            <button class="chip active" type="button" data-category="todos">Todos</button>
+            <button class="chip" type="button" data-category="musica">Música</button>
+            <button class="chip" type="button" data-category="festa">Festas</button>
+            <button class="chip" type="button" data-category="teatro">Teatro</button>
+            <button class="chip" type="button" data-category="gastronomia">Gastronomia</button>
+          </div>
+        </div>
+
+        <div class="event-grid" id="event-grid">
+          <article class="event-card" data-category="musica" data-search="festival aurora indie rock parque ibirapuera">
+            <div class="event-poster poster-aurora">
+              <span class="poster-label">MÚSICA</span>
+              <span class="poster-word">AURORA</span>
+              <div class="poster-lines"></div>
+            </div>
+            <div class="event-body">
+              <div class="event-date"><b>25</b><span>SET</span></div>
+              <div class="event-main">
+                <h3>Festival Aurora</h3>
+                <p>Parque Ibirapuera · São Paulo</p>
+                <div class="event-footer"><span>A partir de <strong>R$ 120</strong></span><button type="button" class="icon-button" aria-label="Ver Festival Aurora">→</button></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="teatro" data-search="entre atos teatro comedia municipal">
+            <div class="event-poster poster-atos">
+              <span class="poster-label">TEATRO</span>
+              <span class="poster-word">ENTRE<br>ATOS</span>
+              <div class="poster-circle"></div>
+            </div>
+            <div class="event-body">
+              <div class="event-date"><b>30</b><span>SET</span></div>
+              <div class="event-main">
+                <h3>Entre Atos</h3>
+                <p>Teatro Municipal · Centro</p>
+                <div class="event-footer"><span>A partir de <strong>R$ 60</strong></span><button type="button" class="icon-button" aria-label="Ver Entre Atos">→</button></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="gastronomia" data-search="mesa aberta festival gastronomico praca central comida">
+            <div class="event-poster poster-mesa">
+              <span class="poster-label">GASTRONOMIA</span>
+              <span class="poster-word">MESA<br>ABERTA</span>
+              <div class="poster-dots"></div>
+            </div>
+            <div class="event-body">
+              <div class="event-date"><b>05</b><span>OUT</span></div>
+              <div class="event-main">
+                <h3>Mesa Aberta</h3>
+                <p>Praça Central · São Paulo</p>
+                <div class="event-footer"><span><strong>Entrada gratuita</strong></span><button type="button" class="icon-button" aria-label="Ver Mesa Aberta">→</button></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="festa" data-search="neon club festa dj rooftop centro">
+            <div class="event-poster poster-neon">
+              <span class="poster-label">FESTA</span>
+              <span class="poster-word">NEON<br>CLUB</span>
+              <div class="poster-beam"></div>
+            </div>
+            <div class="event-body">
+              <div class="event-date"><b>11</b><span>OUT</span></div>
+              <div class="event-main">
+                <h3>Neon Club</h3>
+                <p>Rooftop Central · São Paulo</p>
+                <div class="event-footer"><span>A partir de <strong>R$ 80</strong></span><button type="button" class="icon-button" aria-label="Ver Neon Club">→</button></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="musica" data-search="pulso ao vivo rap hip hop arena oeste">
+            <div class="event-poster poster-pulso">
+              <span class="poster-label">MÚSICA</span>
+              <span class="poster-word">PULSO</span>
+              <div class="poster-pulse"></div>
+            </div>
+            <div class="event-body">
+              <div class="event-date"><b>18</b><span>OUT</span></div>
+              <div class="event-main">
+                <h3>Pulso ao Vivo</h3>
+                <p>Arena Oeste · São Paulo</p>
+                <div class="event-footer"><span>A partir de <strong>R$ 95</strong></span><button type="button" class="icon-button" aria-label="Ver Pulso ao Vivo">→</button></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="festa" data-search="afterglow festa eletronica warehouse lapa">
+            <div class="event-poster poster-after">
+              <span class="poster-label">FESTA</span>
+              <span class="poster-word">AFTER<br>GLOW</span>
+              <div class="poster-grid"></div>
+            </div>
+            <div class="event-body">
+              <div class="event-date"><b>24</b><span>OUT</span></div>
+              <div class="event-main">
+                <h3>Afterglow</h3>
+                <p>Warehouse Lapa · São Paulo</p>
+                <div class="event-footer"><span>A partir de <strong>R$ 75</strong></span><button type="button" class="icon-button" aria-label="Ver Afterglow">→</button></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="empty-state" id="empty-state" hidden>Nenhum evento encontrado com esse filtro.</p>
+      </div>
+    </section>
+
+    <section class="section how-section" id="como-funciona" aria-labelledby="how-title">
+      <div class="container how-grid">
+        <div class="how-copy">
+          <span class="eyebrow">Sem burocracia</span>
+          <h2 id="how-title">Do “onde tem?” ao ingresso em poucos passos.</h2>
+          <p>Uma experiência pensada para você gastar menos tempo procurando e mais tempo vivendo.</p>
+          <a class="text-link" href="#eventos">Explorar eventos <span>→</span></a>
+        </div>
+        <ol class="steps">
+          <li><span>01</span><div><h3>Encontre seu rolê</h3><p>Busque por artista, categoria, data ou região.</p></div></li>
+          <li><span>02</span><div><h3>Garanta sua entrada</h3><p>Escolha o ingresso e finalize a compra com segurança.</p></div></li>
+          <li><span>03</span><div><h3>Você está na lista</h3><p>Receba o ingresso digital e apresente na entrada.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section benefits-section" id="vantagens" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="eyebrow">Feito para facilitar</span>
+          <h2 id="benefits-title">Tudo o que você espera. Sem o que atrapalha.</h2>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit-card"><span class="benefit-icon">✓</span><h3>Compra segura</h3><p>Fluxo simples e transparente do início ao fim da compra.</p></article>
+          <article class="benefit-card"><span class="benefit-icon">↗</span><h3>Ingresso digital</h3><p>Seu acesso fica no celular, pronto para usar quando chegar.</p></article>
+          <article class="benefit-card"><span class="benefit-icon">↺</span><h3>Compra protegida</h3><p>Políticas claras para cancelamentos e alterações de evento.</p></article>
+          <article class="benefit-card"><span class="benefit-icon">◎</span><h3>Suporte humano</h3><p>Atendimento para resolver dúvidas antes e depois da compra.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <span class="eyebrow light">Seu próximo evento está por aqui</span>
+            <h2>Onde tem?</h2>
+            <p>Descubra agora o que está acontecendo perto de você.</p>
+          </div>
+          <a class="btn btn-white" href="#eventos">Ver eventos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#topo"><img src="assets/logo.png" alt="" class="brand-mark" /><span class="brand-name">NaLista</span></a>
+        <p>Onde tem? NaLista.</p>
+      </div>
+      <div class="footer-column"><h3>NaLista</h3><a href="#eventos">Eventos</a><a href="#como-funciona">Como funciona</a><a href="#vantagens">Vantagens</a></div>
+      <div class="footer-column"><h3>Ajuda</h3><a href="mailto:contato@nalista.com.br">Contato</a><a href="#">Central de ajuda</a><a href="#">Termos de uso</a></div>
+      <div class="footer-column"><h3>Para produtores</h3><a href="#">Publique seu evento</a><a href="#">Painel do produtor</a><a href="#">Fale com vendas</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 NaLista. Todos os direitos reservados.</span><span>Feito para quem sempre pergunta: “onde tem?”</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
